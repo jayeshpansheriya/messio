@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messio/pages/RegisterPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child:Text('Hello World!')
+          child:RaisedButton(
+            onPressed: (){
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => RegisterPage()),
+            );
+            },
+            child: Text("data"),
+          )
       )
     );
 
