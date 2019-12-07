@@ -7,6 +7,7 @@ INJECTED from /Users/nikhilshah/FlutterProject/Jayesh/messio/android/app/src/mai
 MERGED from /Users/nikhilshah/FlutterProject/Jayesh/messio/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from [com.android.support:multidex:1.0.3] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/0fc37c4320a6c524b6208f556865f42e/AndroidManifest.xml:17:1-22:12
 MERGED from [:firebase_auth] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:file_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
 MERGED from [:google_sign_in] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:cloud_firestore] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -15,6 +16,9 @@ MERGED from [:firebase_storage] /Users/nikhilshah/FlutterProject/Jayesh/messio/b
 MERGED from [com.google.firebase:firebase-auth:17.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-auth-17.0.0.aar/55130eba34757e1190e7cd0e2d81da1b/AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-firestore-21.3.0.aar/6ceef26c2391697237d0189a551454c0/AndroidManifest.xml:2:1-26:12
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/grpc-android-1.21.0.aar/e8c584ecfae48b63b95036e1340d3718/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/5550ab1fad0d7c20b8ded093c912f4e9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/6f907b2ee675fbcb014a095bf3865174/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/3b865c6e44989c5835053dbeed057acf/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/c77152e99f0355ff769886d60b38447b/AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-storage-17.0.0.aar/e7cd729ae1befc5a4605a335636b04b6/AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-18.0.0.aar/31409686a61f2ced0ae59b437bfdaa7d/AndroidManifest.xml:2:1-10:12
@@ -44,8 +48,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/nikhilshah/.gra
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/561b27b334c6889286b638ca1b7b539e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/d8f90ee1d3512131c64385544ed41b14/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/c749af843637ef1dcd9e185799236d76/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/dd5364718b9adfd81765458360bceb89/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/d90217ca9ca69890c7b6fc5bc0d4542f/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/e558e53ac94ce573d0c3dd21a8a4f1a9/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/77d22ace5bb20a0e391b35d3d1ab1b56/AndroidManifest.xml:17:1-22:12
@@ -149,6 +153,8 @@ MERGED from [com.android.support:multidex:1.0.3] /Users/nikhilshah/.gradle/cache
 MERGED from [com.android.support:multidex:1.0.3] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/0fc37c4320a6c524b6208f556865f42e/AndroidManifest.xml:20:5-43
 MERGED from [:firebase_auth] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
@@ -165,6 +171,12 @@ MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/nikhilshah/.g
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-firestore-21.3.0.aar/6ceef26c2391697237d0189a551454c0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/grpc-android-1.21.0.aar/e8c584ecfae48b63b95036e1340d3718/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/grpc-android-1.21.0.aar/e8c584ecfae48b63b95036e1340d3718/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/5550ab1fad0d7c20b8ded093c912f4e9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/5550ab1fad0d7c20b8ded093c912f4e9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/6f907b2ee675fbcb014a095bf3865174/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/6f907b2ee675fbcb014a095bf3865174/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/3b865c6e44989c5835053dbeed057acf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/3b865c6e44989c5835053dbeed057acf/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/c77152e99f0355ff769886d60b38447b/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/c77152e99f0355ff769886d60b38447b/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/firebase-storage-17.0.0.aar/e7cd729ae1befc5a4605a335636b04b6/AndroidManifest.xml:20:5-22:41
@@ -223,10 +235,10 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/nikhilshah/.gradle/ca
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/d8f90ee1d3512131c64385544ed41b14/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/c749af843637ef1dcd9e185799236d76/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/c749af843637ef1dcd9e185799236d76/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/dd5364718b9adfd81765458360bceb89/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/dd5364718b9adfd81765458360bceb89/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/1467dd93a5e6f58ac5d1990ae42c1e9e/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/d90217ca9ca69890c7b6fc5bc0d4542f/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/d90217ca9ca69890c7b6fc5bc0d4542f/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/nikhilshah/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/e558e53ac94ce573d0c3dd21a8a4f1a9/AndroidManifest.xml:20:5-44
@@ -288,9 +300,11 @@ ADDED from [:firebase_auth] /Users/nikhilshah/FlutterProject/Jayesh/messio/build
 	android:name
 		ADDED from [:firebase_auth] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+ADDED from [:file_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+MERGED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+MERGED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+		ADDED from [:file_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from [:image_picker] /Users/nikhilshah/FlutterProject/Jayesh/messio/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
 	android:name

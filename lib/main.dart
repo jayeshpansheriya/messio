@@ -1,57 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:messio/pages/RegisterPage.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:messio/pages/ConversationPageSlide.dart';
+import 'package:messio/repositories/AuthenticationRepository.dart';
+import 'package:messio/repositories/StorageRepository.dart';
+import 'package:messio/repositories/UserDataRepository.dart';
+import 'blocs/authentication/authentication_bloc.dart';
+import 'blocs/authentication/authentication_event.dart';
+import 'blocs/authentication/authentication_state.dart';
+import 'config/Palette.dart';
+import 'pages/RegisterPage.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  //create instances of the repositories to supply them to the app
+  final AuthenticationRepository authRepository = AuthenticationRepository();
+  final UserDataRepository userDataRepository = UserDataRepository();
+  final StorageRepository storageRepository = StorageRepository();
+  runApp(
+    BlocProvider(
+      builder: (context) => AuthenticationBloc(
+          authenticationRepository: authRepository,
+          userDataRepository: userDataRepository,
+          storageRepository: storageRepository)
+        ..add(AppLaunched()),
+      child: Messio(),
+    ),
+  );
+}
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class Messio extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Messio',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
-        primarySwatch: Colors.blue,
+        primaryColor: Palette.primaryColor,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  
-  @override
-  Widget build(BuildContext context) {
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+      home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
+        builder: (context, state) {
+          if (state is UnAuthenticated) {
+            return RegisterPage();
+          } else if (state is ProfileUpdated) {
+            return ConversationPageSlide();
+          } else {
+            return RegisterPage();
+          }
+        },
       ),
-      body: Center(
-          child:RaisedButton(
-            onPressed: (){
-              Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => RegisterPage()),
-            );
-            },
-            child: Text("data"),
-          )
-      )
     );
-
   }
 }
