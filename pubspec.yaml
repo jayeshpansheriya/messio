@@ -27,6 +27,14 @@ dependencies:
   flutter_launcher_icons: ^0.7.4
   rubber: ^0.4.0
   infinite_listview: ^1.0.1+1
+  flutter_bloc: ^2.1.1
+  meta: ^1.1.8
+  firebase_auth: ^0.15.1
+  google_sign_in: ^4.0.14
+  equatable: ^1.0.1
+  cloud_firestore: ^0.12.11
+  image_picker: ^0.6.2+1
+  firebase_storage: ^3.0.8
 
 dev_dependencies:
   flutter_test:

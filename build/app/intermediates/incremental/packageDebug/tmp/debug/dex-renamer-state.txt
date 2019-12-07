@@ -1,0 +1,10 @@
+#Fri Dec 06 17:46:38 IST 2019
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=/Users/nikhilshah/FlutterProject/Jayesh/messio/build/app/intermediates/transforms/dexMerger/debug/0
+base.1=/Users/nikhilshah/FlutterProject/Jayesh/messio/build/app/intermediates/transforms/dexMerger/debug/0
+base.0=/Users/nikhilshah/FlutterProject/Jayesh/messio/build/app/intermediates/transforms/dexMerger/debug/0

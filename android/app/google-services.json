@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "279640975194",
+    "firebase_url": "https://messio-msg.firebaseio.com",
+    "project_id": "messio-msg",
+    "storage_bucket": "messio-msg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279640975194:android:1c2d1fa1fb1638c8fab563",
+        "android_client_info": {
+          "package_name": "com.jayesh.messio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279640975194-niri47t1gistffkrdu714mg1i4hkml7h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jayesh.messio",
+            "certificate_hash": "7dd6bfc6c6dc5902e44b117e52da34464d933813"
+          }
+        },
+        {
+          "client_id": "279640975194-4auqpl86ppemi10bo8d5tg011tqmjbmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5SI2h7mqDcco5C8N7tuodcZWD6A3Cefs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279640975194-4auqpl86ppemi10bo8d5tg011tqmjbmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
