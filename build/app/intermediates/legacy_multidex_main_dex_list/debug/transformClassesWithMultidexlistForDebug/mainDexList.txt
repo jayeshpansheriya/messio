@@ -197,6 +197,7 @@ com/google/android/gms/common/zzc.class
 com/google/android/gms/common/zzm.class
 com/google/android/gms/flags/FlagSource.class
 com/google/android/gms/internal/auth/zzax.class
+com/google/android/gms/stats/CodePackage.class
 com/google/auto/value/AutoAnnotation.class
 com/google/auto/value/AutoOneOf.class
 com/google/auto/value/AutoValue$Builder.class
