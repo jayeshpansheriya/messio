@@ -5,18 +5,19 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:messio/config/Assets.dart';
+import 'package:messio/config/Decorations.dart';
 import 'package:messio/config/Palette.dart';
 import 'package:messio/config/Styles.dart';
 import 'package:messio/config/Transitions.dart';
-import 'package:messio/pages/ConversationPageSlide.dart';
+import 'package:messio/pages/ContactListPage.dart';
 import 'package:messio/widgets/CircleIndicator.dart';
+import 'package:messio/widgets/GradientSnackBar.dart';
 import 'package:messio/widgets/NumberPicker.dart';
-
-import '../blocs/authentication/authentication_bloc.dart';
-import '../blocs/authentication/authentication_event.dart';
-import '../blocs/authentication/authentication_state.dart';
+import 'package:messio/blocs/authentication/Bloc.dart';
 
 class RegisterPage extends StatefulWidget {
+  RegisterPage();
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -31,14 +32,15 @@ class _RegisterPageState extends State<RegisterPage>
   //fields for the form
   File profileImageFile;
   ImageProvider profileImage;
+  ImageProvider placeHolderImage = Image.asset(Assets.user).image;
   int age = 18;
   final TextEditingController usernameController = TextEditingController();
 
   var isKeyboardOpen =
       false; //this variable keeps track of the keyboard, when its shown and when its hidden
 
-  PageController pageController =
-      PageController(); // this is the controller of the page. This is used to navigate back and forth between the pages
+  PageController
+      pageController; // this is the controller of the page. This is used to navigate back and forth between the pages
 
   //Fields related to animation of the gradient
   Alignment begin = Alignment.center;
@@ -59,6 +61,7 @@ class _RegisterPageState extends State<RegisterPage>
 
   void initApp() async {
     WidgetsBinding.instance.addObserver(this);
+    pageController = PageController();
     usernameFieldAnimationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 300));
     profilePicHeightAnimation =
@@ -89,7 +92,6 @@ class _RegisterPageState extends State<RegisterPage>
         end = Alignment(1 - pageController.page, 1 - pageController.page);
       });
     });
-
     authenticationBloc = BlocProvider.of<AuthenticationBloc>(context);
     authenticationBloc.listen((state) {
       if (state is Authenticated) {
@@ -222,10 +224,12 @@ class _RegisterPageState extends State<RegisterPage>
     }, child: Container(
       child: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
-          profileImage = Image.asset(Assets.user).image;
+          profileImage = placeHolderImage;
           if (state is PreFillData) {
             age = state.user.age != null ? state.user.age : 18;
-            profileImage = Image.network(state.user.photoUrl).image;
+            if (state.user.photoUrl != null) {
+              profileImage = Image.network(state.user.photoUrl).image;
+            }
           } else if (state is ReceivedProfilePicture) {
             profileImageFile = state.file;
             profileImage = Image.file(profileImageFile).image;
@@ -315,17 +319,8 @@ class _RegisterPageState extends State<RegisterPage>
           style: Styles.subHeadingLight,
           focusNode: usernameFocusNode,
           controller: usernameController,
-          decoration: InputDecoration(
-            hintText: '@username',
-            //hintStyle: Styles.hintTextLight,
-            contentPadding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Palette.primaryColor, width: 0.1),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Palette.primaryColor, width: 0.1),
-            ),
-          ),
+          decoration: Decorations.getInputDecorationLight(
+              hint: '@username', context: context),
         ));
   }
 
@@ -392,7 +387,7 @@ class _RegisterPageState extends State<RegisterPage>
   navigateToHome() {
     Navigator.push(
       context,
-      SlideLeftRoute(page: ConversationPageSlide()),
+      SlideLeftRoute(page: ContactListPage()),
     );
   }
 
@@ -408,13 +403,26 @@ class _RegisterPageState extends State<RegisterPage>
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 FloatingActionButton(
-                  onPressed: () => authenticationBloc.add(SaveProfile(
-                      profileImageFile, age, usernameController.text)),
+                  onPressed: () => {
+                    if ((profileImageFile != null ||
+                            profileImage != placeHolderImage) &&
+                        age != null &&
+                        usernameController.text.isNotEmpty)
+                      {
+                        authenticationBloc.add(SaveProfile(
+                            profileImageFile, age, usernameController.text))
+                      }
+                    else
+                      {
+                        GradientSnackBar.showError(
+                            context, 'Please fill all details')
+                      }
+                  },
                   elevation: 0,
                   backgroundColor: Palette.primaryColor,
                   child: Icon(
                     Icons.done,
-                    color: Palette.accentColor,
+                    color:Theme.of(context).accentColor,
                   ),
                 )
               ],

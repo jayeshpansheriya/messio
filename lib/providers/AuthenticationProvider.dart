@@ -1,10 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:messio/providers/BaseProviders.dart';
+import 'package:messio/config/Constants.dart';
+import 'package:messio/utils/SharedObjects.dart';
+import 'BaseProviders.dart';
 
 class AuthenticationProvider extends BaseAuthenticationProvider {
-  final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
-  final GoogleSignIn googleSignIn = GoogleSignIn();
+
+   final FirebaseAuth firebaseAuth;
+   final GoogleSignIn googleSignIn;
+
+  AuthenticationProvider({FirebaseAuth firebaseAuth, GoogleSignIn googleSignIn}):
+        firebaseAuth= firebaseAuth ?? FirebaseAuth.instance, googleSignIn = googleSignIn ?? GoogleSignIn();
 
   @override
   Future<FirebaseUser> signInWithGoogle() async {
@@ -18,12 +24,17 @@ class AuthenticationProvider extends BaseAuthenticationProvider {
         accessToken: authentication.accessToken);
     await firebaseAuth.signInWithCredential(
         credential); //sign in to firebase using the generated credentials
-    return firebaseAuth.currentUser(); //return the firebase user created
+    FirebaseUser firebaseUser = await firebaseAuth.currentUser();
+    await SharedObjects.prefs.setString(Constants.sessionUid, firebaseUser.uid);
+    print('Session UID1 ${SharedObjects.prefs.getString(Constants.sessionUid)}');
+    return firebaseUser; //return the firebase user created
   }
 
   @override
   Future<void> signOutUser() async {
-    return Future.wait([firebaseAuth.signOut(), googleSignIn.signOut()]); // terminate the session
+    print('firebaseauth $firebaseAuth');
+    await SharedObjects.prefs.clearSession();
+    await Future.wait([firebaseAuth.signOut(), googleSignIn.signOut()]); // terminate the session
   }
 
   @override
@@ -36,4 +47,7 @@ class AuthenticationProvider extends BaseAuthenticationProvider {
     final user = await firebaseAuth.currentUser(); //check if user is logged in or not
     return user != null;
   }
+
+  @override
+  void dispose() {}
 }
